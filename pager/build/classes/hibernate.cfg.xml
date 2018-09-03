@@ -1,0 +1,20 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://127.0.0.1:3306/demo</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">1234</property>
+		
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		
+		<!-- 是否在控制台打印sql语句，true打印，false不打印 -->
+		<property name="show_sql">true</property>
+		<!-- 将sql语句格式化再打印 ,格式化了反而不好阅读 <property name="hibernate.format_sql">true</property> -->
+  
+  		<mapping class="com.imooc.page.model.Student"/>
+	</session-factory>
+</hibernate-configuration>
